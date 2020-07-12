@@ -9,11 +9,11 @@ jobs:
       - name: checkout source code
         uses: actions/checkout@v1
       - name: default deploy
-        uses: panpanzll/my-function@master
+        uses: appleboy/lambda-action@master
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: my-function
-          source: example/index.js
+          source: index.js
           debug: true 
